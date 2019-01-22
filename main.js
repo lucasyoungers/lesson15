@@ -59,11 +59,9 @@ let people = [{
 
 function exercise1() {
     // Return one random person from the array of people.
-    let answer = people.filter((person) => {
-        return person.Salary > 100000
-    });
+    let randomPerson = people[Math.floor(Math.random() * people.length)];
     // This code is missing a map call to return only an array of firstName and lastName
-    document.getElementById("1").innerText = `Answer: ${JSON.stringify(answer)}`;
+    document.getElementById("1").innerText = `Answer: ${JSON.stringify(randomPerson)}`;
 }
 
 function exercise2() {
