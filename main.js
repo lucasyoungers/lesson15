@@ -64,9 +64,17 @@ function exercise1() {
 }
 
 function exercise2() {
-    // Return the people sorted by the number if skills they have.
-    let answer = ["Not Implemented"];
-    document.getElementById("2").innerText = `Answer: ${JSON.stringify(answer)}`;
+    // Return the people sorted by the number of skills they have.
+    let skillSort = people.sort((a, b) => {
+        if (a.Skills.length < b.Skills.length) {
+            return -1;
+        }
+        if (a.Skills.length > b.Skills.length) {
+            return 1;
+        }
+        return 0;
+    });
+    document.getElementById("2").innerText = `Answer: ${JSON.stringify(skillSort)}`;
 }
 
 function exercise3() {
