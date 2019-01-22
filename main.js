@@ -58,7 +58,7 @@ let people = [{
 ];
 
 function exercise1() {
-    // Return an array of the full names of people making over $100,000.
+    // Return one random person from the array of people.
     let answer = people.filter((person) => {
         return person.Salary > 100000
     });
@@ -67,20 +67,20 @@ function exercise1() {
 }
 
 function exercise2() {
-    // Return a total cost of the team by adding up salaries
+    // Return the people sorted by the number if skills they have.
     let answer = ["Not Implemented"];
     document.getElementById("2").innerText = `Answer: ${JSON.stringify(answer)}`;
 }
 
 function exercise3() {
-    // Return an array of the full names of people with "SQL" skills
+    // Return the people sorted by their name, starting with lastName then firstName.
     let answer = ["Not Implemented"];
     // if you do a filter on person.Skills you can test for a specific skill.
     document.getElementById("3").innerText = `Answer: ${JSON.stringify(answer)}`;
 }
 
 function exercise4() {
-    // Return an array of people with "Software Engineer" in their job title.  Each object in the array your return should have 2 properties, fullName, and job.
+    // Return an array of the people with the fields: name, job and salary. Make name the combination of first and last name and the salary a random number between 60000 and 120000
     let answer = ["Not Implemented"];
     // you can use the method of .includes(substring) on a string to find if a string is found inside a string.
     document.getElementById("4").innerText = `Answer: ${JSON.stringify(answer)}`;
