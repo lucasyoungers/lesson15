@@ -60,7 +60,6 @@ let people = [{
 function exercise1() {
     // Return one random person from the array of people.
     let randomPerson = people[Math.floor(Math.random() * people.length)];
-    // This code is missing a map call to return only an array of firstName and lastName
     document.getElementById("1").innerText = `Answer: ${JSON.stringify(randomPerson)}`;
 }
 
