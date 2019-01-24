@@ -79,14 +79,26 @@ function exercise2() {
 
 function exercise3() {
     // Return the people sorted by their name, starting with lastName then firstName.
-    let answer = ["Not Implemented"];
-    // if you do a filter on person.Skills you can test for a specific skill.
-    document.getElementById("3").innerText = `Answer: ${JSON.stringify(answer)}`;
+    let nameSort = people.sort((a, b) => {
+        if (a.lastName < b.lastName) {
+            return -1;
+        }
+        if (a.lastName > b.lastName) {
+            return 1;
+        }
+        if (a.firstName < b.firstName) {
+            return -1;
+        }
+        if (a.firstName > b.firstName) {
+            return 1;
+        }
+        return 0;
+    });
+    document.getElementById("3").innerText = `Answer: ${JSON.stringify(nameSort)}`;
 }
 
 function exercise4() {
     // Return an array of the people with the fields: name, job and salary. Make name the combination of first and last name and the salary a random number between 60000 and 120000
     let answer = ["Not Implemented"];
-    // you can use the method of .includes(substring) on a string to find if a string is found inside a string.
     document.getElementById("4").innerText = `Answer: ${JSON.stringify(answer)}`;
 }
