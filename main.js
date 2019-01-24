@@ -99,6 +99,10 @@ function exercise3() {
 
 function exercise4() {
     // Return an array of the people with the fields: name, job and salary. Make name the combination of first and last name and the salary a random number between 60000 and 120000
-    let answer = ["Not Implemented"];
+    let answer = people.map((person) => {
+        person.name = `${person.firstName} ${person.lastName}`;
+        person.salary = Math.floor(Math.random() * (120000 - 60000 + 1)) + 60000;
+        return `${person.name}, ${person.job}, ${person.salary}`
+    });
     document.getElementById("4").innerText = `Answer: ${JSON.stringify(answer)}`;
 }
